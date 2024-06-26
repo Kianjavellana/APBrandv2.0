@@ -1,0 +1,113 @@
+﻿@model IEnumerable<APBrandv2._0.Models.Variant>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table id="dataTable" class="table table-bordered table-striped " style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VariantName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainCamera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SelfieCamera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BodyRatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Network)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Display)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Platform)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COMMS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Memory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Features)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Battery)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MISC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tests)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model.ModelName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VariantName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainCamera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SelfieCamera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BodyRatio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Network)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Display)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Platform)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COMMS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Features)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Battery)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MISC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tests)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VariantId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VariantId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VariantId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
